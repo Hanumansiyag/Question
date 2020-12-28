@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<style>
+		  .ans{
+		  	display:none;
+		   }
+		   button{
+				background-color:red;
+				color:white;
+				font-size:25px;
+				border:none; 
+		   }
+		  </style>
+		<script src="jquery.min.js"></script>
+			<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					var v =$(this).attr("id");
+					var t = $(this).text();
+					if(t=="+"){
+						$(this).text("-");
+					}
+					else{
+						$(this).text("+");
+					}
+					$("#ans-"+v).toggle(1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<script>
+	    for(i=1;i<=5;i++){
+		document.write("<div><b>Questionn : "+i+"</b> What is HTML ? <button id='"+i+"'>+</button></div>");
+		document.write("<div id='ans-"+i+"' class='ans'><b>Answer "+i+": </b><p>HTML is the standard Hyper Text Markup language for creating web pages.<br>HTML elements are the building blocks of HTML pages.<br>HTML elements are represented by <> tags</p></div><br><br>");
+	     }
+	 </script>
+	</body>
+</html>
+
+
+ 
